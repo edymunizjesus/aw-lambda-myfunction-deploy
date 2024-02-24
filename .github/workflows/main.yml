@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: checkout source code
         uses: actions/checkout@v3
-      - name: gENARATE zIP
-        run: |
-          zip deployment.zip *.mjs
+      - name: Genarate Zip
+        run: 
+          Compress-Archive -Path *.mjs -DestinationPath deployment.zip -Force
       - name: default deploy
         uses: appleboy/lambda-action@v0.1.9
         with:
